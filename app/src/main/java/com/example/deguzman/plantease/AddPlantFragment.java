@@ -159,8 +159,9 @@ public class AddPlantFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (view == fabmulticrop) {
-                    showToast("Multicrop Button clicked");
-                    Intent i = new Intent(getActivity(), AddPlantPlot.class);
+                    showToast("Test Movements Button clicked");
+//                    Intent i = new Intent(getActivity(), AddPlantPlot.class);
+                    Intent i = new Intent(getActivity(), TestMovements.class);
                     startActivity(i);
                 } else if (view == fabunicrop) {
                     showToast("Monocrop Button clicked");

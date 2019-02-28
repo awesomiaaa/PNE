@@ -73,7 +73,8 @@ public class AddPlantActivity extends AppCompatActivity implements DuoMenuView.O
 
     @Override
     public void onFooterClicked() {
-        Toast.makeText(this, "onFooterClicked", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(AddPlantActivity.this, LoginActivity.class));
+        Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show();
     }
 
     @Override

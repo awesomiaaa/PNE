@@ -53,11 +53,11 @@ public class AddPlantViewFragment extends Fragment {
         final String plotw = intent.getStringExtra(AddPlantListAdapter.KEY_PLANT_WIDTH);
         final String id = intent.getStringExtra(AddPlantListAdapter.KEY_ID);
 
-        plantname.setText("Name: " + plantn);
-        spec_plant.setText("Specific Plant: " + specp);
-        plant_distance.setText("Plant Distance: " + plantd);
-        plot_size.setText("Plot Size: " + plots);
-        plot_width.setText("Plot Width: " + plotw);
+        plantname.setText(plantn);
+        spec_plant.setText(specp);
+        plant_distance.setText(plantd);
+        plot_size.setText(plots);
+        plot_width.setText(plotw);
 
         System.out.println(id);
 

@@ -74,7 +74,8 @@ public class HistoryActivity extends AppCompatActivity implements DuoMenuView.On
 
     @Override
     public void onFooterClicked() {
-        Toast.makeText(this, "onFooterClicked", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(HistoryActivity.this, LoginActivity.class));
+        Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show();
     }
 
     @Override

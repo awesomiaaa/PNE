@@ -73,7 +73,8 @@ public class AppInfoActivity extends AppCompatActivity implements DuoMenuView.On
 
     @Override
     public void onFooterClicked() {
-        Toast.makeText(this, "onFooterClicked", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(AppInfoActivity.this, LoginActivity.class));
+        Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show();
     }
 
     @Override

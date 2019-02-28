@@ -19,13 +19,13 @@ public class AddPlantInforActivity extends AppCompatActivity {
 
     public static MaterialBetterSpinner specificplant, plantdistance, plotwidth, plotsize;
 
-    String[] SPINNERLIST = {"Lettuce", "Pechay", "Monggo"};
+    String[] SPINNERLIST = {"Lettuce", "Pechay", "Tomato"};
 
-    String[] SPINNERLIST1 = {"0.5m", "0.6m", "0.7m", "0.8m", "0.8m", "0.9m", "1m"};
+    String[] SPINNERLIST1 = {"0.5m", "0.6m", "0.7m"};
 
-    String[] SPINNERLIST2 = {"1m", "2m", "3m", "4m", "5m", "6m" };
+    String[] SPINNERLIST2 = {"0.5m", "0.8m", "1m", "1.5m"};
 
-    String[] SPINNERLIST3 = {"5m", "10m", "15m", "20m", "25m", "30m", "35m", "40m", "45m", "50" };
+    String[] SPINNERLIST3 = {"5m", "10m", "15m"};
 
 
 

@@ -19,13 +19,11 @@ public class AddPlantPlot extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_plant_plot);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
 
 
-        TextView plant_name = (TextView) findViewById(R.id.plant_name);
-        a = AddPlantInforActivity.plant.getText().toString();
-        plant_name.setText(a);
+//        TextView plant_name = (TextView) findViewById(R.id.plant_name);
+//        a = AddPlantInforActivity.plant.getText().toString();
+//        plant_name.setText(a);
 
         final Button a1 = (Button) findViewById(R.id.a1);
         a1.setOnClickListener(new View.OnClickListener(){

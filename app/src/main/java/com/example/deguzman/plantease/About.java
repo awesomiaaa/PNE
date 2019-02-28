@@ -74,6 +74,7 @@ public class About extends AppCompatActivity implements DuoMenuView.OnMenuClickL
     @Override
     public void onFooterClicked() {
         startActivity(new Intent(About.this, LoginActivity.class));
+        Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show();
     }
 
     @Override

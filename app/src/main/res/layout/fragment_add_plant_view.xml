@@ -5,83 +5,152 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:orientation="vertical"
     android:background="@drawable/background"
+    android:orientation="vertical"
     tools:context=".AddPlantView">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:text="Plant Information"
-        android:textSize="30dp"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="25dp"
-        android:textColor="@color/colorWhite"/>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Plant Information"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:layout_width="389dp"
+        android:layout_height="379dp"
+        android:layout_margin="10dp"
         android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/colorWhite"
         android:orientation="vertical"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp"
         android:paddingTop="30dp"
-        android:layout_margin="10dp"
-        android:background="@color/colorWhite">
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:text="Name:"
+            android:textAllCaps="true"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="20dp"
+            android:text="Specific Plant:"
+            android:textAllCaps="true"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name2"
+            android:layout_marginTop="20dp"
+            android:text="Plant Distance:"
+            android:textAllCaps="true"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/name4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name3"
+            android:layout_marginTop="20dp"
+            android:text="Plot Size:"
+            android:textAllCaps="true"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/name5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name4"
+            android:layout_marginTop="20dp"
+            android:text="Plot Width:"
+            android:textAllCaps="true"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/plant_name"
-            android:layout_width="match_parent"
+            android:layout_width="164dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textAllCaps="true"
+            android:layout_alignEnd="@+id/spec_plant"
+            android:layout_alignBottom="@+id/name"
+            android:layout_marginStart="78dp"
+            android:layout_marginEnd="-2dp"
+            android:layout_toEndOf="@+id/name"
+            android:layout_toRightOf="@+id/name"
             android:textSize="25dp" />
 
         <TextView
             android:id="@+id/spec_plant"
-            android:layout_width="match_parent"
+            android:layout_width="164dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textAllCaps="true"
-            />
+            android:layout_alignEnd="@+id/plot_size"
+            android:layout_alignBottom="@+id/name2"
+            android:layout_marginStart="28dp"
+            android:layout_toEndOf="@+id/name2"
+            android:layout_toRightOf="@+id/name2"
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/plant_distance"
-            android:layout_width="match_parent"
+            android:layout_width="164dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textAllCaps="true"/>
+            android:layout_below="@+id/spec_plant"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/name3"
+            android:layout_toRightOf="@+id/name3"
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/plot_size"
-            android:layout_width="match_parent"
+            android:layout_width="163dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textAllCaps="true"/>
+            android:layout_alignEnd="@+id/plant_distance"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="84dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="172dp"
+            android:layout_toEndOf="@+id/name4"
+            android:layout_toRightOf="@+id/name4"
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/plot_width"
-            android:layout_width="match_parent"
+            android:layout_width="164dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textAllCaps="true"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="63dp"
+            android:layout_marginBottom="123dp"
+            android:layout_toEndOf="@+id/name5"
+            android:layout_toRightOf="@+id/name5"
+            android:textSize="25dp" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="25dp"
             android:id="@+id/start"
+            android:layout_width="269dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="19dp"
             android:background="@drawable/button_white_gradient"
             android:text="START SCANNING"
-            android:textSize="20dp"
             android:textColor="@android:color/white"
-            android:layout_marginBottom="20dp"/>
-    </LinearLayout>
+            android:textSize="20dp" />
+    </RelativeLayout>
 </LinearLayout>
