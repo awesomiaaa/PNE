@@ -1,0 +1,135 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Plant Information"
+        android:textColor="@color/colorWhite"
+        android:textSize="25dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="Name"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/spec_plant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Specific Plant:"
+            android:textSize="18dp" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lettuce"
+            android:backgroundTint="@color/colortransparent"
+            android:textColorHint="@color/colorAccent"
+            app:met_floatingLabel="normal" />
+
+        <TextView
+            android:id="@+id/plant_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plant Distance:"
+            android:textSize="18dp" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0m"
+            android:backgroundTint="@color/colortransparent"
+            android:textColorHint="@color/colorAccent"
+            app:met_floatingLabel="normal" />
+
+        <TextView
+            android:id="@+id/plot_width"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plot Width:"
+            android:textSize="18dp" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0m"
+            android:backgroundTint="@color/colortransparent"
+            android:textColorHint="@color/colorAccent"
+            app:met_floatingLabel="normal" />
+
+        <TextView
+            android:id="@+id/plot_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plot Size:"
+            android:textSize="18dp" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinner4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0m"
+            android:backgroundTint="@color/colortransparent"
+            android:textColorHint="@color/colorAccent"
+            app:met_floatingLabel="normal" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_grad"
+            android:text="SUBMIT"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/GridLayout1"
+             />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_white_gradient"
+            android:text="BACK"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/submit"
+
+            android:layout_marginBottom="20dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

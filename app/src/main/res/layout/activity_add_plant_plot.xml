@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".AddPlantPlot">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/plant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Plant Name"
+        android:textColor="@color/colorWhite"
+        android:textSize="25dp"
+        android:textAlignment="center"/>
+
+    <GridLayout
+        android:id="@+id/GridLayout1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="10"
+        android:paddingTop="20dp"
+        >
+
+        <Button
+            android:id="@+id/a1"
+            android:layout_width="198dp"
+            android:layout_height="150dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@drawable/home_button"
+            android:text="A1"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/a2"
+            android:layout_width="198dp"
+            android:layout_height="150dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:background="@drawable/home_button"
+            android:text="A2"
+            android:textSize="30dp"
+            android:textColor="#000"
+            />
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="198dp"
+            android:layout_height="150dp"
+            android:background="@drawable/home_button"
+            android:text="B1"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="198dp"
+            android:layout_height="150dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:background="@drawable/home_button"
+            android:text="B2"
+            android:textSize="30dp"
+            android:textColor="#000"
+            />
+
+        <Button
+            android:id="@+id/c1"
+            android:layout_width="198dp"
+            android:layout_height="150dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:background="@drawable/home_button"
+            android:text="C1"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <Button
+            android:id="@+id/c2"
+            android:layout_width="198dp"
+            android:layout_height="150dp"
+            android:background="@drawable/home_button"
+            android:text="C2"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_row="2"
+            android:layout_column="1"/>
+
+        <Button
+            android:id="@+id/d1"
+            android:layout_width="198dp"
+            android:layout_height="150dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:background="@drawable/home_button"
+            android:text="D1"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <Button
+            android:id="@+id/d2"
+            android:layout_width="198dp"
+            android:layout_height="150dp"
+            android:background="@drawable/home_button"
+            android:text="D2"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_row="3"
+            android:layout_column="1"/>
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_grad"
+        android:text="SUBMIT"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/GridLayout1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_white_gradient"
+        android:text="BACK"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/submit"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_marginBottom="20dp"/>
+    </LinearLayout>
+</ScrollView>

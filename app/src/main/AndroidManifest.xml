@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.deguzman.plantease">
+
+    <uses-sdk tools:overrideLibrary="org.lucasr.twowayview, org.lucasr.twowayview.widget, jp.wasabeef.recyclerview" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:theme, replace=android:label">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Library" />
+        <activity android:name=".LibraryView" />
+        <activity android:name=".About" />
+        <activity android:name=".ScanActivity" />
+        <activity android:name=".AddPlantActivity" />
+        <activity android:name=".AddPlantInforActivity" />
+        <activity android:name=".AddPlantPlot" />
+        <activity android:name=".DisplayActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".AddPlantView" />
+        <activity android:name=".Summary" />
+        <activity android:name=".Loading" />
+        <activity android:name=".Loading2" />
+        <activity android:name=".AppInfoActivity"></activity>
+    </application>
+
+</manifest>

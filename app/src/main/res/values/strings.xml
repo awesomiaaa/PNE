@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">plantease</string>
+
+
+    <string name="hello_blank_fragment">This is the main fragment</string>
+
+    <array name="menuOptions">
+        <item>Home</item>
+        <item>Library</item>
+        <item>Scan</item>
+        <item>History</item>
+        <item>About</item>
+        <item>How to use the App</item>
+    </array>
+</resources>
