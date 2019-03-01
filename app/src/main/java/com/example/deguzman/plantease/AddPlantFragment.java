@@ -74,8 +74,8 @@ public class AddPlantFragment extends Fragment {
         webSettings.setJavaScriptEnabled(true);
         String htmlText = " %s ";
         String myData = "<html><body style=\"text-align:justify; color: #FFF\"> <br>1. The page is inteded to display all information before the scanning procedure. <br>" +
-                "2. The user has the opportunity to scan the field and indicate whether it is a Monocrop or a Multicrop type of farming.<br>" +
-                "3. To add necessary inforamtion for the plot size, plant distance and specific plant. Click on the red (+) icon on the lower right of the page. <br>" +
+                "2. The user has the opportunity to scan the field and indicate a plant information.<br>" +
+                "3. To add necessary inforamtion for the plot size and specific plant. Click on the red (+) icon on the lower right of the page. <br>" +
                 "4. After providing all information, the system will now be directed to the scan process.</body></Html>";
 
         webView.loadData(String.format(htmlText,myData),"text/html","utf-8");

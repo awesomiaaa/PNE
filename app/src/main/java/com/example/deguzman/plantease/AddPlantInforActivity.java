@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
@@ -17,15 +18,15 @@ public class AddPlantInforActivity extends AppCompatActivity {
 
     public static EditText plant;
 
-    public static MaterialBetterSpinner specificplant, plantdistance, plotwidth, plotsize;
+    public static TextView plantdistance, plotwidth;
+
+    public static MaterialBetterSpinner specificplant, plotsize;
 
     String[] SPINNERLIST = {"Lettuce", "Pechay", "Tomato"};
 
-    String[] SPINNERLIST1 = {"0.5m", "0.6m", "0.7m"};
-
     String[] SPINNERLIST2 = {"0.5m", "0.8m", "1m", "1.5m"};
 
-    String[] SPINNERLIST3 = {"5m", "10m", "15m"};
+    String[] SPINNERLIST3 = {"1m", "2m", "3m", "4m", "5m", "10m", "15m"};
 
 
 
@@ -54,17 +55,16 @@ public class AddPlantInforActivity extends AppCompatActivity {
                 findViewById(R.id.spinner1);
         specificplant.setAdapter(arrayAdapter);
 
-        ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, SPINNERLIST1);
-        plantdistance = (MaterialBetterSpinner)
+
+        plantdistance = (TextView)
                 findViewById(R.id.spinner2);
-        plantdistance.setAdapter(arrayAdapter1);
+        plantdistance.setText("0.3m");
 
         ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, SPINNERLIST2);
-        plotwidth = (MaterialBetterSpinner)
+        plotwidth = (TextView)
                 findViewById(R.id.spinner3);
-        plotwidth.setAdapter(arrayAdapter2);
+        plotwidth.setText("1m");
 
         ArrayAdapter<String> arrayAdapter3 = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, SPINNERLIST3);

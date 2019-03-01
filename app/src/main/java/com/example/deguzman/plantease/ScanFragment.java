@@ -86,11 +86,14 @@ public class ScanFragment extends Fragment {
         webView.setBackgroundColor(Color.TRANSPARENT);
         webSettings.setJavaScriptEnabled(true);
         String htmlText = " %s ";
-        String myData = "<html><body style=\"text-align:justify; color: #FFF\"> <br>1. The page is intended to display the result based on the location of all the captured image (A1, A2, B1, B2, ....)." +
-                "<br>"+
-                "2. The image has two major card color changes. <br>" +
-                "   RED - Signifies that the location contains disease.<br>" +
-                "   GREEN - Signifies tha the location is healthy or free of disease. <br>"+
+        String myData = "<html><body style=\"text-align:justify; color: #FFF\"> " +
+                "<br>1. The page is intended to display the result based on the location of all the captured image (A1, A2, B1, B2, ....)." +
+                "<br>2. The image has two major card color changes. <br>" +
+                "<ul style=\"list-style-type:disc;\">" +
+                "<li>RED - Signifies that the location contains disease.</li>" +
+                "<li>GREEN - Signifies that the location is healthy or free of disease. </li>" +
+                "<li>GRAY - Signifies that the location is an object or not a plant</li>"+
+                "</ul>" +
                 "3. To display the specific result of the scanning process, click on the card and read all important information.</body></Html>";
 
         webView.loadData(String.format(htmlText,myData),"text/html","utf-8");

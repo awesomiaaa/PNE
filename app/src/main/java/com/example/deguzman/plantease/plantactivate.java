@@ -19,11 +19,11 @@ public class plantactivate extends AsyncTask<Void, Void, String> {
         try {
             URL url = new URL("http://172.20.10.2:8000/Plant_Listers/?format=json");
 
-            plant_name = AddPlantViewFragment.plantname.getText().toString().replaceAll("\\s+","").split(":")[1];
-            specific_plant = AddPlantViewFragment.spec_plant.getText().toString().replaceAll("\\s+","").split(":")[1];
-            plant_width = AddPlantViewFragment.plot_width.getText().toString().replaceAll("\\s+","").split(":")[1];
-            plot_size = AddPlantViewFragment.plot_size.getText().toString().replaceAll("\\s+","").split(":")[1];
-            plant_distance = AddPlantViewFragment.plant_distance.getText().toString().replaceAll("\\s+","").split(":")[1];
+            plant_name = AddPlantViewFragment.plantname.getText().toString();
+            specific_plant = AddPlantViewFragment.spec_plant.getText().toString();
+            plant_width = AddPlantViewFragment.plot_width.getText().toString();
+            plot_size = AddPlantViewFragment.plot_size.getText().toString();
+            plant_distance = AddPlantViewFragment.plant_distance.getText().toString();
 
             a=plant_name;
             b=specific_plant;
@@ -31,12 +31,11 @@ public class plantactivate extends AsyncTask<Void, Void, String> {
             d=plot_size;
             e=plant_distance;
 
-
             String urlParameters = "plant_name="+ a + "&specific_plant=" + b + "&plant_width="+ c +"&plot_size="+ d + "&plant_distance=" + e ;
 //            String urlParameters = "plant_name="+ plant_name + "&specific_plant=" + specific_plant + "&plant_width="+ plant_width +"&plot_size="+ plot_size + "&plant_distance=" + plant_distance ;
 
 //            String urlParameters="plant_name="+plant_name+"&specific_plant="+specific_plant+"&plant_width="+"asdasd"+"&plot_size=asdasda&plant_distance=sadasda" ;
-            System.out.println(urlParameters);
+            System.out.println(a+b+c+d+e);
 //            urlParameters = "plant_name=asd";
 
 
