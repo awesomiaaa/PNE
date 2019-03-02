@@ -100,6 +100,7 @@ public class AddPlantViewFragment extends Fragment {
 
 //
 //
+
                 Intent i = new Intent(getActivity(), Loading.class);
                 startActivity(i);
 //

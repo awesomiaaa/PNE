@@ -7,6 +7,7 @@ import android.os.Message;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -93,6 +94,7 @@ public class Loading extends AppCompatActivity {
 
                 });
 
+                Toast.makeText(Loading.this, "Finish capturing plants!", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(Loading.this, ScanActivity.class));
             }
         });
