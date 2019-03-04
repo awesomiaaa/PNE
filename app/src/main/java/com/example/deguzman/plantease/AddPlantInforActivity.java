@@ -26,7 +26,7 @@ public class AddPlantInforActivity extends AppCompatActivity {
 
     String[] SPINNERLIST2 = {"0.5m", "0.8m", "1m", "1.5m"};
 
-    String[] SPINNERLIST3 = {"1m", "2m", "3m", "4m", "5m", "10m", "15m"};
+    String[] SPINNERLIST3 = {"1m", "2m", "3m", "4m", "5m", "6m", "7m", "8m", "9m", "10m", "11m", "12m", "13m", "14m", "15m"};
 
 
 

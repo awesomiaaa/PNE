@@ -10,6 +10,16 @@
     tools:context=".AddPlantView">
 
     <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:textColor="@color/colortransparent"
+        />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -21,7 +31,7 @@
         android:textSize="30dp" />
 
     <RelativeLayout
-        android:layout_width="389dp"
+        android:layout_width="match_parent"
         android:layout_height="379dp"
         android:layout_margin="10dp"
         android:layout_marginTop="?attr/actionBarSize"

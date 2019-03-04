@@ -5,26 +5,24 @@ import android.os.AsyncTask;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
-public class activate extends AsyncTask<Void, Void, String> {
+public class capture extends AsyncTask<Void, Void, String> {
     String data="";
     String result = "";
     public static String urlParameters, urlParameters1, plant_name, specific_plant, plant_width, plot_size, plant_distance;
 
-    @Override
-    protected void onPreExecute(){
 
-    }
 
     @Override
     protected String doInBackground(Void... voids) {
 
         try {
-            URL url = new URL("http://172.20.10.2:8000/Scans/?format=json");
+            URL url = new URL("http://172.20.10.3:8080/capture/?format=json");
 //            URL url = new URL("http://192.168.1.10:8080/Scans/?format=json");
 
-            urlParameters = "status=True";
+            urlParameters = "status=true";
 
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
@@ -92,9 +90,9 @@ public class activate extends AsyncTask<Void, Void, String> {
             + responseOutput.toString());
 
            result = ""+output;
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();*/
+*/
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -105,12 +103,8 @@ public class activate extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String aVoid) {
-        super.onPostExecute(aVoid);
 
-//    while (ScanActivity.jo.optString("status").equals("true")){
-//        System.out.println("A");
-//    }
-//
+
     }
 
 

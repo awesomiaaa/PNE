@@ -7,15 +7,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -25,7 +24,6 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,13 +34,25 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import cz.msebera.android.httpclient.Header;
 
 import static android.provider.Settings.System.AIRPLANE_MODE_ON;
 
@@ -78,7 +88,33 @@ public class ScanFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_scan, container, false);
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.setTimeout(70000);
+        client.get("http://172.20.10.2:8080/start/", new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+/*
+                        onDisplay process = new onDisplay();
+                        process.execute();
+*/
+                        /*deactivate deact = new deactivate();
+                        deact.execute();*/
+                  /*      System.out.println("s");
+                        Intent i = new Intent(AddPlantView.this, ScanActivity.class);
+                        startActivity(i);*/
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+
+
+        });
+
+            View view = inflater.inflate(R.layout.fragment_scan, container, false);
 
         webView= (WebView) view.findViewById(R.id.webView);
         webSettings=webView.getSettings();
@@ -104,7 +140,6 @@ public class ScanFragment extends Fragment {
             public void onClick(View v) {
                 /*final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.dialog_scan);
-
                 recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
                 recyclerView.setHasFixedSize(true);
                 *//*recyclerView.setLayoutManager(new LinearLayoutManager(this));*//*
@@ -145,6 +180,7 @@ public class ScanFragment extends Fragment {
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading...");
         progressDialog.show();
+        progressDialog.setCancelable(false);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
                 URL_DATA, new Response.Listener<String>() {
@@ -238,9 +274,10 @@ public class ScanFragment extends Fragment {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                 startActivity(intent);
 
+
                             }
                         }
-                    }, 10000);
+                    }, 30000);
 
 
                 } catch (JSONException e) {
@@ -311,3 +348,4 @@ public class ScanFragment extends Fragment {
         }
     }
 }
+
