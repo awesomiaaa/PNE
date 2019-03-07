@@ -26,7 +26,7 @@ public class TabFragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.activity_tab_fragment1, container, false);
+        View view = inflater.inflate(R.layout.diseaseoutput, container, false);
 
         Intent intent = getActivity().getIntent();
         String disease = intent.getStringExtra(DevelopersAdapter.KEY_DISEASE);
@@ -35,55 +35,53 @@ public class TabFragment1 extends Fragment {
         String libdisease = intent.getStringExtra(ListViewAdapter.KEY_DISEASE);
 
 
-//        tab = (TextView) view.findViewById(R.id.textView2);
+        tab = (TextView) view.findViewById(R.id.textView2);
 
-        webView= (WebView) view.findViewById(R.id.textView2);
-        webSettings=webView.getSettings();
-        webSettings.setDefaultFontSize(20);
-        webView.setBackgroundColor(Color.TRANSPARENT);
-        webSettings.setJavaScriptEnabled(true);
-        String htmlText = " %s ";
+//        webView= (WebView) view.findViewById(R.id.textView2);
+//        webSettings=webView.getSettings();
+//        webSettings.setDefaultFontSize(20);
+//        webView.setBackgroundColor(Color.TRANSPARENT);
+//        webSettings.setJavaScriptEnabled(true);
+//        String htmlText = " %s ";
 
 
       //  tab.setText(libdisease);
     if(condition.equalsIgnoreCase("unhealthy")) {
-        if (disease.equalsIgnoreCase("Leaf Spot") || disease.equalsIgnoreCase("spot")) {
-            String myData = "<html><body style=\"text-align:center\"> Leaf Spot </body></Html>";
-
-            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
-
-        } else if (disease.equalsIgnoreCase("Powdery Mildew") || disease.equalsIgnoreCase("mildew")) {
-            String myData = "<html><body style=\"text-align:center\"> Powdery Mildew </body></Html>";
-
-            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
-
-        } else if (disease.equalsIgnoreCase("Anthracnose") || disease.equalsIgnoreCase("antracnose' ")) {
-            String myData = "<html><body style=\"text-align:center\"> Anthracnose </body></Html>";
-
-            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
-
-        } else if (disease.equalsIgnoreCase("Late Blight ") || disease.equalsIgnoreCase("lateblight")) {
-            String myData = "<html><body style=\"text-align:center\"> Late Blight </body></Html>";
-
-            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
-
-        } else if (disease.equalsIgnoreCase("not a plant") || disease.equalsIgnoreCase("object")) {
-            String myData = "<html><body style=\"text-align:center\"> Not a Plant </body></Html>";
-
-            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
-
+        if (disease.equalsIgnoreCase("tomatoant")) {
+//            String myData = "<html><body style=\"text-align:center\"> Anthracnose in Tomato </body></Html>";
+//
+//            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
+            tab.setText(" Anthracnose in Tomato");
+        } else if (disease.equalsIgnoreCase("tomatobli")) {
+//            String myData = "<html><body style=\"text-align:center\"> Blight in Tomato </body></Html>";
+//
+//            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
+            tab.setText(" Blight in Tomato");
+        } else if (disease.equalsIgnoreCase("lettucemos") ) {
+//            String myData = "<html><body style=\"text-align:center\"> Moscaic Virus in Lettuce  </body></Html>";
+//
+//            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
+            tab.setText("Moscaic Virus in Lettuce");
+        } else if (disease.equalsIgnoreCase("pechayant")) {
+//            String myData = "<html><body style=\"text-align:center\"> Anthracnose in Pechay </body></Html>";
+//
+//            webView.Anthracnose(String.format(htmlText,myData),"text/html","utf-8");
+            tab.setText("Mildew in Pechayo");
+        }else if (disease.equalsIgnoreCase("pechaymil") ) {
+//            String myData = "<html><body style=\"text-align:center\"> Mildew in Pechay </body></Html>";
+//
+//            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
+            tab.setText("Mildew in Pechay");
         }
     }
     else if(condition.equalsIgnoreCase("object")) {
-            String myData = "<html><body style=\"text-align:center\"> Not a Plant </body></Html>";
-
-            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
-
+//            String myData = "<html><body style=\"text-align:center\"> Not a Plant </body></Html>";
+//
+//            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
+        tab.setText("Not a Plant");
         }
     else if(condition.equalsIgnoreCase("healthy")){
-        String myData = "<html><body style=\"text-align:center\"> No Disease Detected </body></Html>";
-
-        webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
+            tab.setText("No Disease Detected");
 
     }
 

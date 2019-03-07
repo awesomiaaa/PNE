@@ -37,14 +37,12 @@ public class LibraryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_library, container, false);
 
-        title = new String[]{"Downy Mildew", "Late Blight", "Viral Diseases", "Bacterial spots", "Gray Mold", "Soft Rot"};
-        description = new String[]{" Downy mildew (Bremia lactucae) is a common disease of lettuce in cooler growing environments, where temperatures are low and there are long periods of leaf wetness caused by overnight dew.",
-                "Late blight is caused by the oomycete pathogen Phytophthora infestans.",
+        title = new String[]{"Mildew", "Blight", "Mosaic Virus", "Anthracnose"};
+        description = new String[]{"Mildew (Bremia lactucae) is a common disease of lettuce in cooler growing environments, where temperatures are low and there are long periods of leaf wetness caused by overnight dew.",
+                "Blight is caused by the oomycete pathogen Phytophthora infestans.",
                 "Viruses are intracellular (inside cells) pathogenic particles that infect other living organisms.",
-                "Bacterial leaf spots are caused by the Xanthomonas and Pseudomonas families of bacteria. These bacteria overwinter in plant debris, but cannot survive for long in soil or water alone.",
-                "A fungus that is pathogenic on many plants. This organism can survive on many hosts or on plant debris.",
-                "The bacteria responsible for soft rot in lettuce is transferred by weather, insects, contaminated tools, infested plant debris and splashing water from rain and sprinklers."};
-        icon = new int[]{R.drawable.downey_mildew, R.drawable.late_blight, R.drawable.yellow_leaf, R.drawable.bacterial_spots, R.drawable.gray_mold, R.drawable.soft_rot};
+                "Anthracnose is a general term for a variety of diseases that affect plants in similar ways."};
+                icon = new int[]{R.drawable.downey_mildew, R.drawable.late_blight, R.drawable.yellow_leaf, R.drawable.bacterial_spots};
 
 
         listView = view.findViewById(R.id.listView);

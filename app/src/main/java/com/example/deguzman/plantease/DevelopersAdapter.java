@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout;
@@ -313,9 +315,9 @@ public class DevelopersAdapter extends RecyclerView.Adapter<DevelopersAdapter.Vi
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .into(holder.model_pic);*/
 
-/*        Picasso.with(context)
+        Picasso.with(context)
                 .load(developersList.getModel_pic())
-                .into(holder.model_pic);*/
+                .into(holder.model_pic);
 
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -386,7 +388,7 @@ public class DevelopersAdapter extends RecyclerView.Adapter<DevelopersAdapter.Vi
             condition = (TextView) itemView.findViewById(R.id.conditiontxt);
             disease = (TextView) itemView.findViewById(R.id.textView);
             diagnosis = (TextView) itemView.findViewById(R.id.textView2);
-         //   model_pic = (ImageView) itemView.findViewById(R.id.imageView);
+            model_pic = (ImageView) itemView.findViewById(R.id.pic);
             /*html_url = (TextView) itemView.findViewById(R.id.htmUrl);*/
             linearLayout = (LinearLayout) itemView.findViewById(R.id.linearLayout);
              /*if(KEY_PLANT_NO.equals("")){

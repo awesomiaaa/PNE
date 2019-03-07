@@ -89,30 +89,30 @@ public class ScanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.setTimeout(70000);
-        client.get("http://172.20.10.2:8080/start/", new AsyncHttpResponseHandler() {
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-/*
-                        onDisplay process = new onDisplay();
-                        process.execute();
-*/
-                        /*deactivate deact = new deactivate();
-                        deact.execute();*/
-                  /*      System.out.println("s");
-                        Intent i = new Intent(AddPlantView.this, ScanActivity.class);
-                        startActivity(i);*/
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
-            }
-
-
-        });
+//        AsyncHttpClient client = new AsyncHttpClient();
+//        client.setTimeout(70000);
+//        client.get("http://172.20.10.2:8080/start/", new AsyncHttpResponseHandler() {
+//
+//            @Override
+//            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+///*
+//                        onDisplay process = new onDisplay();
+//                        process.execute();
+//*/
+//                        /*deactivate deact = new deactivate();
+//                        deact.execute();*/
+//                  /*      System.out.println("s");
+//                        Intent i = new Intent(AddPlantView.this, ScanActivity.class);
+//                        startActivity(i);*/
+//            }
+//
+//            @Override
+//            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+//
+//            }
+//
+//
+//        });
 
             View view = inflater.inflate(R.layout.fragment_scan, container, false);
 
@@ -128,7 +128,7 @@ public class ScanFragment extends Fragment {
                 "<ul style=\"list-style-type:disc;\">" +
                 "<li>RED - Signifies that the location contains disease.</li>" +
                 "<li>GREEN - Signifies that the location is healthy or free of disease. </li>" +
-                "<li>GRAY - Signifies that the location is an object or not a plant</li>"+
+                "<li>GREY - Signifies that the location is an object or not a plant</li>"+
                 "</ul>" +
                 "3. To display the specific result of the scanning process, click on the card and read all important information.</body></Html>";
 
@@ -277,7 +277,7 @@ public class ScanFragment extends Fragment {
 
                             }
                         }
-                    }, 30000);
+                    }, 15000);
 
 
                 } catch (JSONException e) {

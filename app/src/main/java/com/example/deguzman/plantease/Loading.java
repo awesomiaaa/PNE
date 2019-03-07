@@ -69,30 +69,30 @@ public class Loading extends AppCompatActivity {
 //
 //
 //                });
-//                AsyncHttpClient client1 = new AsyncHttpClient();
-//                client1.setTimeout(70000);
-//                client1.get("http://172.20.10.2:8000/start/", new AsyncHttpResponseHandler() {
-//
-//                    @Override
-//                    public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-///*
-//                        onDisplay process = new onDisplay();
-//                        process.execute();
-//*/
-//                        /*deactivate deact = new deactivate();
-//                        deact.execute();*/
-//                  /*      System.out.println("s");
-//                        Intent i = new Intent(AddPlantView.this, ScanActivity.class);
-//                        startActivity(i);*/
-//                    }
-//
-//                    @Override
-//                    public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-//
-//                    }
-//
-//
-//                });
+                AsyncHttpClient client1 = new AsyncHttpClient();
+                client1.setTimeout(70000);
+                client1.get("http://172.20.10.2:8000/start/", new AsyncHttpResponseHandler() {
+
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+/*
+                        onDisplay process = new onDisplay();
+                        process.execute();
+*/
+                        /*deactivate deact = new deactivate();
+                        deact.execute();*/
+                  /*      System.out.println("s");
+                        Intent i = new Intent(AddPlantView.this, ScanActivity.class);
+                        startActivity(i);*/
+                    }
+
+                    @Override
+                    public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+                    }
+
+
+                });
 
                 Toast.makeText(Loading.this, "Finish capturing plants!", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(Loading.this, ScanActivity.class));
@@ -121,7 +121,7 @@ public class Loading extends AppCompatActivity {
                 public void run() {
                     for (int i = 0; i < 100; i++) {
                         try {
-                            Thread.sleep(500);
+                            Thread.sleep(400);
                             myHandler.sendEmptyMessage(0);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
