@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     CheckBox checkBox;
     ImageButton signin;
     Button signup;
-    private static final String URL_DATA = "http://172.20.10.2:8000/Users/?format=json";
+    private static final String URL_DATA = "http://172.20.10.3:8000/Users/?format=json";
     public String username;
     public String user, pw, decrypted, a;
 
@@ -62,12 +62,12 @@ public class LoginActivity extends AppCompatActivity {
 //                Toast.makeText(MainActivity.this,"Sign In Button Clicked",Toast.LENGTH_LONG).show();
 //                Intent i = new Intent(MainActivity.this, HomeActivity.class);
 //                startActivity(i);
-                if(email.getText().toString().equals(user) & password.getText().toString().equals(pw)){
+//                if(email.getText().toString().equals(user) & password.getText().toString().equals(pw)){
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                }
-                else{
-                    Toast.makeText(LoginActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
-                }
+//                }
+//                else{
+//                    Toast.makeText(LoginActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
         signup.setOnClickListener(new View.OnClickListener(){

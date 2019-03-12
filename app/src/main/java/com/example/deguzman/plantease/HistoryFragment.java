@@ -39,7 +39,7 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class HistoryFragment extends Fragment {
-    private static final String URL_DATA = "http://172.20.10.2:8000/Scans/?format=json";
+    private static final String URL_DATA = "http://172.20.10.3:8000/Scans/?format=json";
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -132,14 +132,12 @@ public class HistoryFragment extends Fragment {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }*/
 

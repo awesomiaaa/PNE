@@ -63,7 +63,7 @@ public class TabFragment1 extends Fragment {
 //            webView.loadData(String.format(htmlText,myData),"text/html","utf-8");
             tab.setText("Moscaic Virus in Lettuce");
         } else if (disease.equalsIgnoreCase("pechayant")) {
-//            String myData = "<html><body style=\"text-align:center\"> Anthracnose in Pechay </body></Html>";
+//            String myData = "<html><body style=\"text-align:center\"sudo> Anthracnose in Pechay </body></Html>";
 //
 //            webView.Anthracnose(String.format(htmlText,myData),"text/html","utf-8");
             tab.setText("Mildew in Pechayo");
@@ -81,7 +81,15 @@ public class TabFragment1 extends Fragment {
         tab.setText("Not a Plant");
         }
     else if(condition.equalsIgnoreCase("healthy")){
-            tab.setText("No Disease Detected");
+        if (disease.equalsIgnoreCase("pechayhea")) {
+            tab.setText("Pechay has no disease.");
+        }
+        else if (disease.equalsIgnoreCase("lettucehea")) {
+            tab.setText("Lettuce has no disease.");
+        }
+        if (disease.equalsIgnoreCase("tomatohea")) {
+            tab.setText("Tomato has no disease.");
+        }
 
     }
 

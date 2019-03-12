@@ -21,7 +21,7 @@ public class activate extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... voids) {
 
         try {
-            URL url = new URL("http://172.20.10.2:8000/Scans/?format=json");
+            URL url = new URL("http://172.20.10.3:8000/Scans/?format=json");
 //            URL url = new URL("http://192.168.1.10:8080/Scans/?format=json");
 
             urlParameters = "status=True";

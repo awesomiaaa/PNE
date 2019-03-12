@@ -41,7 +41,8 @@
         <activity android:name=".Loading" />
         <activity android:name=".Loading2" />
         <activity android:name=".AppInfoActivity" />
-        <activity android:name=".TestMovements"></activity>
+        <activity android:name=".TestMovements" />
+        <activity android:name=".HistoryDisplay"></activity>
     </application>
 
 </manifest>

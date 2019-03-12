@@ -46,7 +46,7 @@ import java.util.List;
  */
 public class AddPlantFragment extends Fragment {
 
-    private static final String URL_DATA = "http://172.20.10.2:8000/Plant_Lists/?format=json";
+    private static final String URL_DATA = "http://172.20.10.3:8000/Plant_Lists/?format=json";
 
     private PlayersDataAdapter mAdapter;
     SwipeController swipeController = null;

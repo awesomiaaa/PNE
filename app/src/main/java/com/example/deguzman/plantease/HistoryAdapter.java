@@ -3,9 +3,11 @@ package com.example.deguzman.plantease;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.provider.Settings;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +15,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 import static android.provider.Settings.System.AIRPLANE_MODE_ON;
 
@@ -89,7 +94,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
                 holder.card.setBackgroundResource(R.drawable.redbg);
             }
             else if (historyList.getCondition().equalsIgnoreCase("healthy")) {
-             //   holder.card.setCardBackgroundColor(Color.parseColor("Green"));
+                //   holder.card.setCardBackgroundColor(Color.parseColor("Green"));
                 holder.card.setBackgroundResource(R.drawable.background);
             }
             else{
@@ -217,7 +222,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
                 Intent skipIntent = new Intent(v.getContext(), DisplayActivity.class);
                 //          skipIntent.putExtra(KEY_PLANT_TYPE, developersList1.getPlant_type());
                 skipIntent.putExtra(KEY_PLANT_NO, historyList1.getPlant_no());
-            //    skipIntent.putExtra(KEY_DATE, historyList1.getDate());
+                //    skipIntent.putExtra(KEY_DATE, historyList1.getDate());
                 skipIntent.putExtra(KEY_CONDITION, historyList1.getCondition());
                 skipIntent.putExtra(KEY_DISEASE, historyList1.getDisease());
                 skipIntent.putExtra(KEY_DIAGNOSIS, historyList1.getDiagnosis());

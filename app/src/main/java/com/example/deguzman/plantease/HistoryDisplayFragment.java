@@ -59,19 +59,19 @@ import static android.provider.Settings.System.AIRPLANE_MODE_ON;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ScanFragment extends Fragment {
+public class HistoryDisplayFragment extends Fragment {
 
     final Context context = getActivity();
     static boolean isAirplaneModeOn(Context context) {
         ContentResolver contentResolver = context.getContentResolver();
         return Settings.System.getInt(contentResolver, AIRPLANE_MODE_ON, 0) != 0;
     }
-    private static final String URL_DATA = "http://172.20.10.3:8000/Scans/?format=json";
+    private static final String URL_DATA = "http://172.20.10.2:8000/Scans/?format=json";
     //    private static final String URL_DATA = "http://192.168.1.10:8080/Scans/?format=json";
     public static ProgressDialog progressDialog;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    private List<DevelopersList> developersLists;
+    private List<HistoryAdapter> historyLists;
 
     private SwipeRefreshLayout mySwipeRefreshLayout;
 
@@ -114,7 +114,7 @@ public class ScanFragment extends Fragment {
 //
 //        });
 
-            View view = inflater.inflate(R.layout.fragment_scan, container, false);
+        View view = inflater.inflate(R.layout.fragment_history_display, container, false);
 
         webView= (WebView) view.findViewById(R.id.webView);
         webSettings=webView.getSettings();
@@ -166,7 +166,7 @@ public class ScanFragment extends Fragment {
         /*recyclerView.setLayoutManager(new LinearLayoutManager(this));*/
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
         recyclerView.setLayoutManager(gridLayoutManager);
-        developersLists = new ArrayList<>();
+        historyLists = new ArrayList<>();
 
 
 
@@ -213,18 +213,14 @@ public class ScanFragment extends Fragment {
                     for (int l = 0; l < a.length(); l++) {
                         JSONObject rec = a.getJSONObject(l);
 
-                        DevelopersList developers = new DevelopersList(
-                                rec.getString("condition"),
-                                jo.getBoolean("status"),
-                                jo.getString("id"),
-                                rec.getString("plant_no"),
-                                rec.getString("disease"),
-                                rec.getString("diagnosis"),
-                                rec.getString("model_pic"));
-
-
-
-                        developersLists.add(developers);
+//                        HistoryList history = new HistoryList(jo.getString("date"),
+//                                jo.getString("id"),
+//                                rec.getString("plant_no"),
+//                                rec.getString("condition"),
+//                                rec.getString("disease"),
+//                                rec.getString("diagnosis"),
+//                                rec.getString("model_pic"));
+//                        historyLists.add(history);
                         System.out.println( rec.getString("condition"));
 
                         if(jo.optString("status").equals("false")){
@@ -243,7 +239,7 @@ public class ScanFragment extends Fragment {
 
 
 
-                    adapter = new DevelopersAdapter(developersLists, getActivity().getApplicationContext());
+//                    adapter = new HistoryAdapter(historyLists, getActivity().getApplicationContext());
 
                     recyclerView.setAdapter(adapter);
 
