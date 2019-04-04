@@ -81,15 +81,15 @@ public class TabFragment1 extends Fragment {
         tab.setText("Not a Plant");
         }
     else if(condition.equalsIgnoreCase("healthy")){
-        if (disease.equalsIgnoreCase("pechayhea")) {
-            tab.setText("Pechay has no disease.");
-        }
-        else if (disease.equalsIgnoreCase("lettucehea")) {
-            tab.setText("Lettuce has no disease.");
-        }
-        if (disease.equalsIgnoreCase("tomatohea")) {
-            tab.setText("Tomato has no disease.");
-        }
+//        if (disease.equals("pechayhea")) {
+            tab.setText("No Disease Detected");
+//        }
+//        else if (disease.equals("lettucehea")) {
+//            tab.setText("Lettuce has no disease.");
+//        }
+//        else if (disease.equals("tomatohea")) {
+//            tab.setText("Tomato has no disease.");
+//        }
 
     }
 

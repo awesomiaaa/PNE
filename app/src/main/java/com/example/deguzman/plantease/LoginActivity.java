@@ -35,7 +35,8 @@ public class LoginActivity extends AppCompatActivity {
     CheckBox checkBox;
     ImageButton signin;
     Button signup;
-    private static final String URL_DATA = "http://172.20.10.3:8000/Users/?format=json";
+//    private static final String URL_DATA = "http://172.20.10.3:8000/Users/?format=json";
+    private static final String URL_DATA = "http://192.168.1.15:8000/Users/?format=json";
     public String username;
     public String user, pw, decrypted, a;
 

@@ -115,11 +115,12 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="75dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,13 +131,13 @@
                     android:textStyle="bold" />
 
                 <Button
+                    android:id="@+id/signin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
                     android:layout_marginTop="10dp"
-                    android:id="@+id/signin"
+                    android:layout_marginRight="40dp"
                     android:background="@drawable/button_background"
                     android:text="SIGN IN"
                     android:textColor="@android:color/white" />

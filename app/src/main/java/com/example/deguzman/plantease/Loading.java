@@ -71,8 +71,8 @@ public class Loading extends AppCompatActivity {
 //                });
                 AsyncHttpClient client1 = new AsyncHttpClient();
                 client1.setTimeout(70000);
-                client1.get("http://172.20.10.2:8000/start/", new AsyncHttpResponseHandler() {
-
+//                client1.get("http://172.20.10.3:8000/start/", new AsyncHttpResponseHandler() {
+                client1.get("http://192.168.1.15:8000/start/", new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 /*

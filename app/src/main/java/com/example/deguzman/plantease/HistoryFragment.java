@@ -39,7 +39,8 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class HistoryFragment extends Fragment {
-    private static final String URL_DATA = "http://172.20.10.3:8000/Scans/?format=json";
+//    private static final String URL_DATA = "http://172.20.10.3:8000/Scans/?format=json";
+    private static final String URL_DATA = "http://192.168.1.15:8000/Scans/?format=json";
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;

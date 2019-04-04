@@ -14,7 +14,9 @@ import android.widget.Toast;
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
 public class AddPlantInforActivity extends AppCompatActivity {
-    private static final String URL_DATA = "http://172.20.10.2:8000/Plant_Lists/?format=json";
+//    private static final String URL_DATA = "http://172.20.10.3:8000/Plant_Lists/?format=json";
+    private static final String URL_DATA = "http://192.168.1.15:8000/Plant_Lists/?format=json";
+
 
     public static EditText plant;
 

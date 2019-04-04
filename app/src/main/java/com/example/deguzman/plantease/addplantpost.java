@@ -17,7 +17,8 @@ public class addplantpost extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... voids) {
 
         try {
-            URL url = new URL("http://172.20.10.2:8000/Plant_Lists/?format=json");
+//            URL url = new URL("http://172.20.10.3:8000/Plant_Lists/?format=json");
+            URL url = new URL("http://192.168.1.15:8000/Plant_Lists/?format=json");
 
             plant = AddPlantInforActivity.plant.getText().toString();
             specplant = AddPlantInforActivity.specificplant.getText().toString();

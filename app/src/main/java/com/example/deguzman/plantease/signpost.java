@@ -17,7 +17,7 @@ public class signpost extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... voids) {
 
         try {
-            URL url = new URL("http://172.20.10.2:8000/Users/?format=json");
+            URL url = new URL("http://172.20.10.3:8000/Users/?format=json");
 
             uname = SignUpActivity.name.getText().toString();
             email = SignUpActivity.email.getText().toString();

@@ -54,7 +54,7 @@ import static com.example.deguzman.plantease.ScanFragment.progressDialog;
 
 public class AddPlantViewFragment extends Fragment {
 
-    private static final String URL_DATA = "http://172.20.10.3:8080/capture/?format=json";
+    private static final String URL_DATA = "http://172.20.10.2:8080/capture/?format=json";
 
     public static JSONObject stats;
 
@@ -110,7 +110,7 @@ public class AddPlantViewFragment extends Fragment {
                 System.out.println("f");
                 AsyncHttpClient client = new AsyncHttpClient();
                 client.setTimeout(70000);
-                client.get("http://172.20.10.3:8080/start/", new AsyncHttpResponseHandler() {
+                client.get("http://172.20.10.2:8080/start/", new AsyncHttpResponseHandler() {
 
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
